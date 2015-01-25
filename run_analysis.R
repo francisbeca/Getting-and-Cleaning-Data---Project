@@ -1,4 +1,7 @@
 # Step1. Merges the training and the test sets to create one data set.
+#make sure you correctly download the data from the provided URL and rename the folder with "data". 
+#Make sure the folder "data" and the run_analysis.R script are both in the working directory.
+
 setwd("~/Desktop/")
 trainData <- read.table("./data/train/X_train.txt")
 dim(trainData) # 7352*561
@@ -71,6 +74,3 @@ for(i in 1:subjectLen) {
 }
 head(result)
 write.table(result, "data_with_means.txt", row.name=F) # write out the 2nd dataset
-
-# data <- read.table("./data_with_means.txt")
-# data[1:12, 1:3]
